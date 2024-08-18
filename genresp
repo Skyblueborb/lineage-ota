@@ -11,7 +11,7 @@ import os
 FILENAME = list(set(glob("lineage-*")) - set(glob("*.json")))[0]
 STATUS = FILENAME.split("-")[3]
 VERSION = FILENAME.split("-")[1]
-BUILD_TIME = int(datetime.now(timezone.utc).replace(tzinfo=timezone.utc).timestamp())
+BUILD_TIME = int(datetime.now(timezone.utc).timestamp())
 
 json_dict = {}
 json_dict["response"] = []
